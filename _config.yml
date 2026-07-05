@@ -1,12 +1,9 @@
 title: Benson.O
-description: AI Infrastructure + Agent Product Architect
+description: AI Infrastructure / Agent Systems / Knowledge Systems
 url: "https://superobk.github.io"
 baseurl: ""
 theme: minima
-author:
-  name: Benson.O
-  github: superobk
-  linkedin: bensonou
+author: Benson.O
 plugins:
   - jekyll-seo-tag
   - jekyll-feed
