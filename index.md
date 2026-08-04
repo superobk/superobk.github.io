@@ -75,19 +75,6 @@ Public-safe keywords: OPD, trajectory learning, agent memory, skill reuse, audit
 
 ---
 
-# Public Boundary
-
-This homepage intentionally hides sensitive project details. It does not publish customer names, internal repository paths, private datasets, application campaign material, unpublished research progress, or exact deployment configuration.
-
-The useful public layer is the engineering shape:
-
-- what problem the system addresses
-- which boundary matters
-- how a developer should reason about the workflow
-- what evidence should be captured before making stronger claims
-
----
-
 # Technical Map
 
 ```text
@@ -122,9 +109,3 @@ This boundary-first style makes technical material easier to debug, teach, and r
 
 - GitHub: [github.com/superobk](https://github.com/superobk/)
 - LinkedIn: [linkedin.com/in/bensonou](https://www.linkedin.com/in/bensonou/)
-
----
-
-# Life
-
-I like building personal knowledge systems around real engineering work: raw materials, reusable notes, diagrams, demos, and public artifacts. The goal is not just to remember projects, but to make each project easier to explain, verify, and continue.
