@@ -2,10 +2,11 @@ title: Benson.O
 description: AI Infrastructure / Workload Scheduling / Agent Learning
 url: "https://superobk.github.io"
 baseurl: ""
-theme: minima
 author: Benson.O
 plugins:
   - jekyll-seo-tag
-  - jekyll-feed
 markdown: kramdown
 permalink: pretty
+collections:
+  sections:
+    output: false

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% seo %}
+    <link rel="stylesheet" href="{{ '/assets/css/profile.css' | relative_url }}">
+  </head>
+  <body>
+    {% assign ordered_sections = site.sections | sort: 'order' %}
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="site-name" href="#about">Benson.O</a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          {% for section in ordered_sections %}
+            {% if section.show_in_nav %}
+              <a href="#{{ section.slug }}">{{ section.nav_label }}</a>
+            {% endif %}
+          {% endfor %}
+        </nav>
+      </div>
+    </header>
+
+    <main class="profile-shell">
+      <aside class="profile-sidebar" aria-label="Profile summary">
+        <img class="profile-avatar" src="{{ '/assets/benson-o-cartoon-icon.png' | relative_url }}" alt="Illustrated profile of Benson.O">
+        <p class="sidebar-name">Benson.O</p>
+        <p class="sidebar-role">AI Infrastructure<br>Workload Scheduling<br>Agent Learning</p>
+        <div class="sidebar-links" aria-label="External links">
+          <a href="https://github.com/superobk/" rel="me">GitHub</a>
+          <a href="https://www.linkedin.com/in/bensonou/" rel="me">LinkedIn</a>
+        </div>
+      </aside>
+
+      <div class="profile-content">
+        {% for section in ordered_sections %}
+          <section id="{{ section.slug }}" class="profile-section{% if section.status == 'draft' %} is-draft{% endif %}">
+            <div class="section-heading">
+              <h1>{{ section.title }}</h1>
+              {% if section.status == 'draft' %}<span class="section-status">In progress</span>{% endif %}
+            </div>
+            {% if section.image %}
+              <img class="section-visual" src="{{ section.image | relative_url }}" alt="{{ section.image_alt | default: section.title }}">
+            {% endif %}
+            <div class="section-body">
+              {{ section.content | markdownify }}
+              {% if section.status == 'draft' %}
+                <p class="to-be-continued">To be continued.</p>
+              {% endif %}
+            </div>
+          </section>
+        {% endfor %}
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div>© {{ site.time | date: '%Y' }} Benson.O</div>
+      <div>AI Infrastructure / Workload Scheduling / Agent Learning</div>
+    </footer>
+  </body>
+</html>
