@@ -39,7 +39,7 @@
               <h1>{{ section.title }}</h1>
               {% if section.status == 'draft' %}<span class="section-status">In progress</span>{% endif %}
             </div>
-            {% if section.image %}
+            {% if section.image and section.image != "" %}
               <img class="section-visual" src="{{ section.image | relative_url }}" alt="{{ section.image_alt | default: section.title }}">
             {% endif %}
             <div class="section-body">
