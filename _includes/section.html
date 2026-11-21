@@ -1,0 +1,9 @@
+<section id="{{ entry.slug }}">
+  <h2>{{ entry.title }}</h2>
+  {% if entry.status == 'draft' %}
+    <p class="muted">To be continued.</p>
+  {% else %}
+    {{ entry.content | markdownify }}
+    {% if entry.image and entry.image != '' %}<img class="section-image" loading="lazy" src="{{ entry.image | relative_url }}" alt="{{ entry.image_alt }}">{% endif %}
+  {% endif %}
+</section>

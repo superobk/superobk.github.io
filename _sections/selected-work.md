@@ -5,11 +5,15 @@ slug: selected-work
 order: 30
 status: current
 show_in_nav: true
-image: /assets/benson-o-profile-map.svg
-image_alt: Benson.O technical focus map
+image: ""
+image_alt: ""
 ---
 
-### OCDP: One Click Model Deployment
+### MicroDuck training console
+
+I work on the tools around a locomotion experiment, from selecting a training task and tracking its checkpoints to replaying it in simulation. [MicroDuck research notes](#microduck)
+
+### OCDP: One Click Deployment Platform
 
 OCDP is an AI infrastructure direction for turning heterogeneous GPU clusters into repeatable model deployment workflows. The public-facing idea is simple: expose GPU development environments, model-serving endpoints, workload templates, and platform governance through a browser-based control surface instead of asking users to operate Kubernetes and GPU nodes directly.
 
