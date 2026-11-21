@@ -29,6 +29,31 @@ figure { margin:0; text-align:center; }
 figure img,.section-image { width:100%; height:auto; display:block; mix-blend-mode:multiply; }
 figcaption,.muted,footer { color:#625e54; font-style:italic; }
 footer { padding:1rem 0 2rem; border-top:1px solid var(--rule); }
+.notebook-cover { position:relative; }
+.notebook-cover img { display:block; width:100%; height:auto; }
+.notebook-cover a { position:absolute; }
+.notebook-cover a:hover { background:rgb(42 53 93 / 5%); }
+a:focus-visible { outline:3px solid var(--blue); outline-offset:2px; }
+.skip-link:not(:focus) { position:absolute; height:1px; width:1px; overflow:hidden; clip-path:inset(50%); }
+.skip-link:focus { position:absolute; top:8px; left:8px; z-index:3; background:white; padding:.5rem; }
+.notebook-detail { width:min(100%,360px); height:auto; }
+.project-page .project-body { display:block; max-width:760px; padding-block:2rem 4rem; }
+.project-body h1 { max-width:19ch; }
+.project-body h2 { margin-top:2rem; }
+.project-body p { max-width:none; }
+.project-body img { max-width:100%; height:auto; display:block; }
+#selected-work h3:not(:first-of-type) { padding-left:86px; min-height:54px; display:flex; align-items:center; background-position:left center; background-size:78px auto; background-repeat:no-repeat; }
+#workload-scheduling-notes { background-image:url('../notebook/workloads.webp'); }
+#ocdp-one-click-deployment-platform { background-image:url('../notebook/ocdp.webp'); }
+#agent-learning { background-image:url('../notebook/agents.webp'); }
+#news::after { content:""; display:block; width:min(100%,290px); aspect-ratio:333/91; background:url('../notebook/mountains.webp') center/contain no-repeat; }
+@media(min-width:901px) { .notebook-home header { display:none; } }
+.notebook-cover .spread-zoom { display:none; }
+@media(max-width:900px) {
+  .notebook-cover a { display:none; }
+  .notebook-cover .spread-zoom { display:block; inset:0; }
+}
+@media(max-width:700px) { .notebook-detail { display:none; } }
 @media(max-width:1000px) {
   header { gap:.75rem; }
   nav { width:100%; margin:0; }

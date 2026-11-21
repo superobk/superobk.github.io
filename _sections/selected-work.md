@@ -11,7 +11,7 @@ image_alt: ""
 
 ### MicroDuck training console
 
-I work on the tools around a locomotion experiment, from selecting a training task and tracking its checkpoints to replaying it in simulation. [MicroDuck research notes](#microduck)
+I work on the tools around a locomotion experiment, from selecting a training task and tracking its checkpoints to replaying it in simulation. [MicroDuck research notes](/projects/microduck/)
 
 ### OCDP: One Click Deployment Platform
 
@@ -22,5 +22,6 @@ OCDP is an AI infrastructure direction for turning heterogeneous GPU clusters in
 This work studies how AI workloads are admitted, placed, observed, and debugged across shared GPU clusters. Its focus is architectural boundaries rather than private implementation: queue admission, quota, readiness, runtime ownership, and auditable evidence for training or serving jobs.
 
 ### OPD / Personal Agent Learning
+{: #agent-learning}
 
 This direction explores how work traces become safer reusable behavior: collect traces, evaluate them, separate supervision from execution, and promote only reviewed patterns. It treats unverified automation as a learning input, not production autonomy.
